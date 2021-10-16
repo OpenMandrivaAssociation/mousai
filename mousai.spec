@@ -16,7 +16,9 @@ BuildRequires: pkgconfig(libadwaita-1)
 BuildRequires: pkgconfig(gtk4)
 
 Requires: typelib(Adw)
+Requires: appstream-util
 Requires: gtk4
+Requires: python
 Requires: python-gobject3
 Requires: python3dist(pygobject)
 Requires: python3dist(requests)
