@@ -39,4 +39,13 @@ Note: This uses the API of audd.io, so it is necessary to log in to their site t
 %install
 %meson_install
 
-%files
+%find_lang %{name}
+
+%files -f %{name}.lang
+%{_bindir}/mousai
+%{_datadir}/appdata/io.github.seadve.Mousai.appdata.xml
+%{_datadir}/applications/io.github.seadve.Mousai.desktop
+%{_datadir}/glib-2.0/schemas/io.github.seadve.Mousai.gschema.xml
+%{_datadir}/mousai/mousai*
+%{_iconsdir}/hicolor/scalable/apps/io.github.seadve.Mousai.svg
+%{_iconsdir}/hicolor/symbolic/apps/io.github.seadve.Mousai-symbolic.svg
