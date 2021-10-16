@@ -14,9 +14,10 @@ Source0:        https://github.com/SeaDve/Mousai/archive/refs/tags/v%{version}/%
 BuildRequires: meson
 BuildRequires: pkgconfig(libadwaita-1)
 BuildRequires: pkgconfig(gtk4)
+BuildRequires: pkgconfig(pythona)
+BuildRequires: appstream-util
 
 Requires: typelib(Adw)
-Requires: appstream-util
 Requires: gtk4
 Requires: python
 Requires: python-gobject3
