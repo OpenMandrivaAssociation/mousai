@@ -10,6 +10,14 @@ Url:            https://github.com/SeaDve/Mousai/
 Source0:        https://github.com/SeaDve/Mousai/archive/refs/tags/v%{version}/%{oname}-%{version}.tar.gz
 
 BuildRequires: meson
+BuildRequires: pkgconfig(libadwaita-1)
+BuildRequires: pkgconfig(gtk4)
+
+Requires: typelib(Adw)
+Requires: gtk4
+Requires: python-gobject3
+Requires: python3dist(pygobject)
+Requires: python3dist(requests)
 
 %description
 Mousai is a simple application that can identify songs similar to Shazam. Just click the listen button, and then wait a few seconds. 
