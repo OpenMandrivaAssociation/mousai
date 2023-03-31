@@ -4,7 +4,7 @@
 
 Name:           mousai
 Version:        0.6.6
-Release:        1
+Release:        2
 Summary:        Identify any songs in seconds
 License:        GPLv3.0
 Group:          Sound/Utilities
