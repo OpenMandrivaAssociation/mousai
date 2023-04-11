@@ -3,13 +3,14 @@
 %define oname   Mousai
 
 Name:           mousai
-Version:        0.6.6
-Release:        2
+Version:        0.7.0
+Release:        1
 Summary:        Identify any songs in seconds
 License:        GPLv3.0
 Group:          Sound/Utilities
 Url:            https://github.com/SeaDve/Mousai/
-Source0:        https://github.com/SeaDve/Mousai/archive/refs/tags/v%{version}/%{oname}-%{version}.tar.gz
+#Source0:        https://github.com/SeaDve/Mousai/archive/refs/tags/v%{version}/%{oname}-%{version}.tar.gz
+Source0:        https://github.com/SeaDve/Mousai/releases/download/v%{version}/mousai-%{version}.tar.xz
 
 BuildRequires: meson
 BuildRequires: pkgconfig(libadwaita-1)
