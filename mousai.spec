@@ -13,6 +13,7 @@ Url:            https://github.com/SeaDve/Mousai/
 Source0:        https://github.com/SeaDve/Mousai/releases/download/v%{version}/mousai-%{version}.tar.xz
 
 BuildRequires: meson
+BuildRequires: cargo
 BuildRequires: rust
 BuildRequires: pkgconfig(libadwaita-1)
 BuildRequires: pkgconfig(gtk4)
