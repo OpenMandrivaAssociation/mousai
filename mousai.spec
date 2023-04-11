@@ -20,6 +20,7 @@ BuildRequires: pkgconfig(python)
 BuildRequires: pkgconfig(gstreamer-1.0)
 BuildRequires: pkgconfig(gstreamer-plugins-base-1.0)
 BuildRequires: pkgconfig(gstreamer-play-1.0)
+BuildRequires: pkgconfig(libpulse-mainloop-glib)
 BuildRequires: appstream-util
 
 Requires: typelib(Adw)
