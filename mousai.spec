@@ -31,7 +31,7 @@ It will magically return the title and artist of that song!
 Note: This uses the API of audd.io, so it is necessary to log in to their site to get more trials.
 
 %prep
-%autosetup -n %{oname}-%{version} -p1
+%autosetup -n %{name}-%{version} -p1
 
 %build
 %meson
