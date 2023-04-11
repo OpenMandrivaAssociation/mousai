@@ -18,6 +18,7 @@ BuildRequires: pkgconfig(libadwaita-1)
 BuildRequires: pkgconfig(gtk4)
 BuildRequires: pkgconfig(python)
 BuildRequires: pkgconfig(gstreamer-1.0)
+BuildRequires: pkgconfig(gstreamer-plugins-base-1.0)
 BuildRequires: appstream-util
 
 Requires: typelib(Adw)
