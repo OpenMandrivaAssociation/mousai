@@ -3,18 +3,25 @@
 %define oname   Mousai
 
 Name:           mousai
-Version:        0.6.6
-Release:        2
+Version:        0.7.0
+Release:        1
 Summary:        Identify any songs in seconds
 License:        GPLv3.0
 Group:          Sound/Utilities
 Url:            https://github.com/SeaDve/Mousai/
-Source0:        https://github.com/SeaDve/Mousai/archive/refs/tags/v%{version}/%{oname}-%{version}.tar.gz
+#Source0:        https://github.com/SeaDve/Mousai/archive/refs/tags/v%{version}/%{oname}-%{version}.tar.gz
+Source0:        https://github.com/SeaDve/Mousai/releases/download/v%{version}/mousai-%{version}.tar.xz
 
 BuildRequires: meson
+BuildRequires: cargo
+BuildRequires: rust
 BuildRequires: pkgconfig(libadwaita-1)
 BuildRequires: pkgconfig(gtk4)
 BuildRequires: pkgconfig(python)
+BuildRequires: pkgconfig(gstreamer-1.0)
+BuildRequires: pkgconfig(gstreamer-plugins-base-1.0)
+BuildRequires: pkgconfig(gstreamer-play-1.0)
+BuildRequires: pkgconfig(libpulse-mainloop-glib)
 BuildRequires: appstream-util
 
 Requires: typelib(Adw)
@@ -30,7 +37,7 @@ It will magically return the title and artist of that song!
 Note: This uses the API of audd.io, so it is necessary to log in to their site to get more trials.
 
 %prep
-%autosetup -n %{oname}-%{version} -p1
+%autosetup -n %{name}-%{version} -p1
 
 %build
 %meson
@@ -43,9 +50,9 @@ Note: This uses the API of audd.io, so it is necessary to log in to their site t
 
 %files -f %{name}.lang
 %{_bindir}/mousai
-%{_datadir}/appdata/io.github.seadve.Mousai.appdata.xml
+%{_datadir}/metainfo/io.github.seadve.Mousai.metainfo.xml
+%{_datadir}/mousai/resources.gresource
 %{_datadir}/applications/io.github.seadve.Mousai.desktop
 %{_datadir}/glib-2.0/schemas/io.github.seadve.Mousai.gschema.xml
-%{_datadir}/mousai/mousai*
 %{_iconsdir}/hicolor/scalable/apps/io.github.seadve.Mousai.svg
 %{_iconsdir}/hicolor/symbolic/apps/io.github.seadve.Mousai-symbolic.svg
