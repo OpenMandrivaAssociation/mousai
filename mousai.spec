@@ -50,9 +50,9 @@ Note: This uses the API of audd.io, so it is necessary to log in to their site t
 
 %files -f %{name}.lang
 %{_bindir}/mousai
-#{_datadir}/appdata/io.github.seadve.Mousai.appdata.xml
+%{_datadir}/metainfo/io.github.seadve.Mousai.metainfo.xml
+%{_datadir}/mousai/resources.gresource
 %{_datadir}/applications/io.github.seadve.Mousai.desktop
 %{_datadir}/glib-2.0/schemas/io.github.seadve.Mousai.gschema.xml
-#{_datadir}/mousai/mousai*
 %{_iconsdir}/hicolor/scalable/apps/io.github.seadve.Mousai.svg
 %{_iconsdir}/hicolor/symbolic/apps/io.github.seadve.Mousai-symbolic.svg
