@@ -3,7 +3,7 @@
 %define oname   Mousai
 
 Name:           mousai
-Version:        0.7.5
+Version:        0.7.6
 Release:        1
 Summary:        Identify any songs in seconds
 License:        GPLv3.0
