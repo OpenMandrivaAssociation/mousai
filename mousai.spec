@@ -12,6 +12,7 @@ Url:            https://github.com/SeaDve/Mousai/
 #Source0:        https://github.com/SeaDve/Mousai/archive/refs/tags/v%{version}/%{oname}-%{version}.tar.gz
 Source0:        https://github.com/SeaDve/Mousai/releases/download/v%{version}/mousai-%{version}.tar.xz
 
+BuildRequires: gettext
 BuildRequires: meson
 BuildRequires: cargo
 BuildRequires: rust
