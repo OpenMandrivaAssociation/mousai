@@ -13,6 +13,7 @@ Url:	https://github.com/SeaDve/Mousai/
 # Use a devel snapshot to pick up a year of fixes and updates
 #Source0:	https://github.com/SeaDve/Mousai/releases/download/v%%{version}/%%{name}-%%{version}.tar.xz
 Source0:	%{name}-%{gitdate}.tar.xz
+Source1:	%{name}-%{gitdate}-vendor.tar.gz
 Patch0:	mousai-0.7.8-add-DBus-service.patch
 BuildRequires: appstream-util
 BuildRequires: desktop-file-utils
@@ -59,6 +60,18 @@ to get more trials.
 %prep
 #autosetup -n %%{name}-%%{version} -p1
 %autosetup -n %{name}-%{gitdate} -p1
+
+tar -zxf %{SOURCE1}
+mkdir -p .cargo
+cat >> .cargo/config.toml << EOF
+[source.crates-io]
+replace-with = "vendored-sources"
+
+[source.vendored-sources]
+directory = "vendor"
+
+EOF
+
 
 
 %build
